@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from '../../components/NavBar/NavBar';
-import SideBar from '../../components/NavBar/SideBar/SideBar';
-import { carers,serviceUsers } from '../../components/NavBar/Data/data';
+import SideBar from '../../components/SideBar/SideBar';
+import { carers,serviceUsers } from '../../components/Data/data';
 import ServiceUsersRotas from '../ServiceUsersRotas/ServiceUsersRotas';
 
 
