@@ -6,16 +6,16 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 const navItems = [
     { path: '/', label: 'Home' },
     { path: '/clients', label: 'Clients' },
-    { path: '/employees', label: 'Employees' },
+    { path: '/carers', label: 'Carers' },
     { path: '/rotas', label: 'Rotas' },
     { path: '/settings', label: 'Settings' },
     { path: '/contact', label: 'Contact' },
-    { path: '/about', label: 'About' },
+    { path: '/notifications', label: ' Send Notifications' },
 ];
 
 const SideNavigator: React.FC = () => (
     <nav className="side-navigator" style={{
-        width: 120,
+        width: 115,
         background: 'rgba(5, 21, 53, 0.94)',
         color: '#fff',
         height: '100vh',
@@ -30,6 +30,10 @@ const SideNavigator: React.FC = () => (
         zIndex: 1000,
         textDecoration: 'none', // Remove underline
     }}>
+        <div style={{ textAlign: 'center', marginBottom: 20, alignSelf: 'center', flexDirection: 'column', display: 'flex', alignItems: 'center' }}>
+            <span style={{ fontSize: 32 }}>🔔</span>
+            <span style={{ fontSize: 14, color: '#fff' }}>Notifications</span>
+        </div>
         <button
             aria-label="Actions"
             style={{
@@ -50,7 +54,7 @@ const SideNavigator: React.FC = () => (
         >
             <FontAwesomeIcon icon={faPlus} color='#fff' style={{fontSize: 30}} />
         </button>
-        <div style={{ textAlign: 'center', color: '#fff', marginBottom: 24, fontSize: 14, fontWeight: 500 }}>
+        <div style={{ textAlign: 'center', color: '#fff', marginBottom: 24, fontSize: 14, fontWeight: 500, borderBottomWidth: 0.8, borderBottomColor: 'grey', borderBottomStyle: 'solid', paddingBottom: 30, width: '45%', alignSelf: 'center' }}>
             Actions
         </div>
     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
@@ -63,13 +67,13 @@ const SideNavigator: React.FC = () => (
                 case '/clients':
                 icon = <span style={{ fontSize: 25, marginRight: 8 }}>👥</span>;
                 break;
-                case '/employees':
+                case '/carers':
                 icon = <span style={{ fontSize: 25, marginRight: 8 }}>🧑‍💼</span>;
                 break;
                 case '/':
                 icon = <span style={{ fontSize: 25, marginRight: 8 }}>🏠</span>;
                 break;
-                case '/about':
+                case '/notifications':
                 icon = <span style={{ fontSize: 25, marginRight: 8 }}>ℹ️</span>;
                 break;
                 case '/settings':
@@ -95,7 +99,7 @@ const SideNavigator: React.FC = () => (
                     background: isActive ? 'rgba(255, 255, 255, 0.2)' : undefined,
                     })}
                     className={({ isActive }) => isActive ? 'text-blue-600 font-semibold' : 'text-gray-700 hover:text-blue-600'}
-                    onMouseOver={(e) => (e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)')}
+                    onMouseOver={(e) => (e.currentTarget.style.background = 'rgba(255, 255, 255, 0.36)')}
                     onMouseOut={(e) => (e.currentTarget.style.background = (e.currentTarget as HTMLElement).classList.contains('text-blue-600') ? 'rgba(255, 255, 255, 0.2)' : 'none')}
                 >
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', alignSelf: 'center'}}>

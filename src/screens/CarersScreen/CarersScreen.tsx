@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from '../../components/NavBar/NavBar'
-import SideBar from '../../components/SideBar/SideBar'
 import { carers, Carer } from '../../components/Data/data'
+import SideNavigator from '../../components/SideBar/SideNavigator'
 
 
 const carersList: Carer[] = carers
@@ -9,8 +9,15 @@ export default function CarersScreen() {
   return (
     <div className="container">
       <NavBar />
-      <SideBar carers={carersList} />
-      {/* Add your carers UI here */}
+      <SideNavigator />
+      <h1>Carers List</h1>
+      <ul>
+        {carersList.map((carer) => (
+          <li key={carer.id}>
+            {carer.name} - {carer.email}
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
