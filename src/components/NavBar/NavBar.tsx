@@ -57,6 +57,12 @@ const NavBar: React.FC = () => {
                     onBlur={e => (e.currentTarget.style.borderColor = '#ccc')}
                 />
                 <span
+                    onClick={() => alert('Search functionality not implemented yet')}
+                    onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                            alert('Search functionality not implemented yet');
+                        }
+                    }}
                     role="img"
                     aria-label="search"
                     style={{
