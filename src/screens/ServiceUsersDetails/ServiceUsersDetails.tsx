@@ -1,4 +1,7 @@
 import React from 'react';
+import NavBar from '../../components/NavBar/NavBar';
+import SideBar from '../../components/SideBar/SideBar';
+import { serviceUsers } from '../../components/Data/data';
 
 const ServiceUsersDetails: React.FC = () => {
     return (

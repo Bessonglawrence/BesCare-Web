@@ -1,74 +1,118 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const tabs = [
-    'Dashboard',
-    'Carers',
-    'Clients',
-    'Manage',
-    'Report',
-    'Finance',
-    'Admin',
+    { name: 'Carers', path: '/carers' },
+    { name: 'Service Users', path: '/service-users' },
+    { name: 'Rotas', path: '/rotas' },
 ];
 
 const NavBar: React.FC = () => {
     return (
         <nav
             style={{
-                display: 'flex',
-                alignItems: 'center',
-                padding: '0 24px',
-                height: '80px',
-                background: '#A5BFCC',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
-            }}
+            display: 'flex',
+            width: '88%',
+            alignItems: 'center',
+            height: '80px',
+            padding: '18px 20px',
+            marginLeft: 140,
+            background: 'white',
+            position: 'fixed',   
+            top: 0,  
+            marginBottom: 20,       
+        }}
         >
             {/* Left: Icon */}
             <div style={{ marginRight: 32, display: 'flex', alignItems: 'center' }}>
-                {/* Simple SVG icon */}
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <rect width="32" height="32" rx="8" fill="#1976d2" />
-                    <text x="16" y="21" textAnchor="middle" fill="#fff" fontSize="16" fontFamily="Arial" fontWeight="bold">B</text>
-                </svg>
-            </div>
-
-            {/* Middle: Tabs */}
-            <div style={{ display: 'flex', flex: 1, justifyContent: 'center', gap: 32 }}>
-                {tabs.map(tab => (
-                    <button
-                        key={tab}
-                        style={{
-                            background: 'none',
-                            border: 'none',
-                            fontSize: 16,
-                            fontWeight: 'bold',
-                            color: '#333',
-                            cursor: 'pointer',
-                            padding: '8px 12px',
-                            borderRadius: 4,
-                            transition: 'background 0.2s',
-                        }}
-                        onMouseOver={e => (e.currentTarget.style.background = 'lightblue')}
-                        onMouseOut={e => (e.currentTarget.style.background = 'none')}
-                    >
-                        {tab}
-                    </button>
-                ))}
+                <img
+                    src="/BesCare.png"
+                    alt="Logo"
+                    style={{ width: 260, height: 200, marginRight: 8 }}
+                />
             </div>
 
             {/* Right: Search Input */}
-            <div style={{ marginLeft: 32 }}>
+            <div style={{ marginLeft: 32, display: 'flex', alignItems: 'center', flex: 1 }}>
                 <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="Search here..."
+                    autoFocus
+                    className="search-input"
                     style={{
                         padding: '8px 12px',
                         borderRadius: 4,
-                        border: '1px solid #ccc',
-                        fontSize: 14,
+                        border: '1.5px solid #ccc',
+                        fontSize: 18,
                         outline: 'none',
-                        width: 300,
+                        width: 350,
+                        height: 28,
+                        transition: 'border-color 0.3s',
+                        borderWidth: 1.5,
+                        fontWeight: 'bold',
+                        color: '#333',
+                        marginLeft: 200,
                     }}
+                    onFocus={e => (e.currentTarget.style.borderColor = '#90caf9')}
+                    onBlur={e => (e.currentTarget.style.borderColor = '#ccc')}
                 />
+                <span
+                    role="img"
+                    aria-label="search"
+                    style={{
+                        marginLeft: -32,
+                        marginRight: 16,
+                        fontSize: 30,
+                        marginTop: 6,
+                        color: '#888',
+                        cursor: 'pointer',
+                        background: 'transparent',
+                        zIndex: 1,
+                        display: 'flex',
+                        alignItems: 'center',
+                    }}
+                >🔍</span>
+                <div style={{ display: 'flex', alignItems: 'center', marginBottom: 25, marginLeft: 'auto', gap: 24, marginRight: 80 }}>
+                    <button style={{
+                        background: 'none',
+                        border: 'none',
+                        color: '#1976d2',
+                        fontSize: 16,
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 4,
+                    }}>
+                        <span role="img" aria-label="help" style={{ fontSize: 20 }}>❓</span>
+                        Help
+                    </button>
+                    <button style={{
+                        background: 'none',
+                        border: 'none',
+                        color: '#1976d2',
+                        fontSize: 16,
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 4,
+                    }}>
+                        <span role="img" aria-label="settings" style={{ fontSize: 20 }}>⚙️</span>
+                        Setting
+                    </button>
+                    <button style={{
+                        background: 'none',
+                        border: 'none',
+                        color: '#d32f2f',
+                        fontSize: 16,
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 4,
+                    }}>
+                        <span role="img" aria-label="logout" style={{ fontSize: 20 }}>🚪</span>
+                        Logout
+                    </button>
+                </div>
             </div>
         </nav>
     );

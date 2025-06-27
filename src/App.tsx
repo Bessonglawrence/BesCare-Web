@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import HomeScreen from './screens/Home/Home.screen';
+import Routes from './Routes/Routes';
 
 function App() {
-  return (
+  return ( 
     <div className="App">
-      <HomeScreen />
+      <Routes />
     </div>
   );
 }
