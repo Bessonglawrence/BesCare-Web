@@ -7,7 +7,7 @@ const navItems = [
     { path: '/', label: 'Home' },
     { path: '/clients', label: 'Clients' },
     { path: '/carers', label: 'Carers' },
-    { path: '/rotas', label: 'Rotas' },
+    { path: '/rotas', label: 'Rotas And Shifts' },
     { path: '/settings', label: 'Settings' },
     { path: '/contact', label: 'Contact' },
     { path: '/notifications', label: ' Send Notifications' },
@@ -15,7 +15,7 @@ const navItems = [
 
 const SideNavigator: React.FC = () => (
     <nav className="side-navigator" style={{
-        width: 115,
+        width: 100,
         background: 'rgba(5, 21, 53, 0.94)',
         color: '#fff',
         height: '100vh',
@@ -30,10 +30,46 @@ const SideNavigator: React.FC = () => (
         zIndex: 1000,
         textDecoration: 'none', // Remove underline
     }}>
-        <div style={{ textAlign: 'center', marginBottom: 20, alignSelf: 'center', flexDirection: 'column', display: 'flex', alignItems: 'center' }}>
+        <div
+            style={{
+                width: 48,
+                height: 48,
+                borderRadius: '50%',
+                background: 'lightblue',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: 700,
+                fontSize: 20,
+                color: '#053b6e',
+                margin: '0 auto 24px auto',
+                letterSpacing: 2,
+                userSelect: 'none',
+                cursor: 'pointer',
+            }}
+        >
+            LO
+        </div>
+        <button style={{ 
+            textAlign: 'center', 
+            marginBottom: 20, 
+            alignSelf: 'center', 
+            flexDirection: 'column', 
+            display: 'flex', 
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            background: "transparent",
+            border: 'none',
+            }}
+            aria-label="Notifications"
+            onClick={() => alert('Notifications clicked!')}
+            className="notification-button"
+            title="Notifications"
+        >
             <span style={{ fontSize: 32 }}>🔔</span>
             <span style={{ fontSize: 14, color: '#fff' }}>Notifications</span>
-        </div>
+        </button>
         <button
             aria-label="Actions"
             style={{
@@ -62,25 +98,25 @@ const SideNavigator: React.FC = () => (
             let icon;
             switch (item.path) {
                 case '/rotas':
-                icon = <span style={{ fontSize: 25, marginRight: 8 }}>📅</span>;
+                icon = <span style={{ fontSize: 20, marginRight: 8 }}>📅</span>;
                 break;
                 case '/clients':
-                icon = <span style={{ fontSize: 25, marginRight: 8 }}>👥</span>;
+                icon = <span style={{ fontSize: 20, marginRight: 8 }}>👥</span>;
                 break;
                 case '/carers':
-                icon = <span style={{ fontSize: 25, marginRight: 8 }}>🧑‍💼</span>;
+                icon = <span style={{ fontSize: 20, marginRight: 8 }}>🧑‍💼</span>;
                 break;
                 case '/':
-                icon = <span style={{ fontSize: 25, marginRight: 8 }}>🏠</span>;
+                icon = <span style={{ fontSize: 20, marginRight: 8 }}>🏠</span>;
                 break;
                 case '/notifications':
-                icon = <span style={{ fontSize: 25, marginRight: 8 }}>ℹ️</span>;
+                icon = <span style={{ fontSize: 20, marginRight: 8 }}>ℹ️</span>;
                 break;
                 case '/settings':
-                icon = <span style={{ fontSize: 25, marginRight: 8 }}>🛠️</span>;
+                icon = <span style={{ fontSize: 20, marginRight: 8 }}>🛠️</span>;
                 break;
                 case '/contact':
-                icon = <span style={{ fontSize: 25, marginRight: 8 }}>✉️</span>;
+                icon = <span style={{ fontSize: 20, marginRight: 8 }}>✉️</span>;
                 break;
                 default:
                 icon = null;
@@ -91,9 +127,12 @@ const SideNavigator: React.FC = () => (
                     to={item.path}
                     end
                     style={({ isActive }) => ({
+                    fontSize: 12,
+                    fontWeight: isActive ? 'bold' : 'normal',
+                    color: isActive ? '#fff' : '#ccc',
+                    textAlign: 'center',
                     display: 'block',
                     padding: '12px 16px',
-                    color: '#fff',
                     textDecoration: 'none',
                     transition: 'background 0.2s, color 0.2s',
                     background: isActive ? 'rgba(255, 255, 255, 0.2)' : undefined,

@@ -1,13 +1,17 @@
+import React from 'react';
+import SideNavigator from '../../components/SideBar/SideNavigator';
+import NavBar from '../../components/NavBar/NavBar';
 
 export default function ServiceUsersRotas() {
-    return (
-        <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-            <h1 style={{ color: '#333', fontSize: '24px', marginBottom: '20px' }}>Service Users Rotas</h1>
-            <p style={{ color: '#555', fontSize: '16px' }}>
-                This screen will display the rotas for service users. You can manage and view the schedules here.
-            </p>
-            {/* Additional content can be added here */}
+  return (
+    <div>
+      <SideNavigator />
+        <NavBar />
+        <div className="container" style={{ justifyContent: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh', padding: '20px' }}>
+            {/* Main content area */}
         </div>
-    );
+        <h1>Welcome to the Service Users Rotas Screen</h1>        
+        <h1>Service Users Rotas</h1>
+    </div>
+  )
 }
-

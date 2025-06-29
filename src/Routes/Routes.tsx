@@ -19,7 +19,7 @@ const AppRoutes: React.FC = () => (
             <Route path="/carers/:id/rota" element={<CarerRota />} />
             <Route path="/clients" element={<ServiceUsersScreen />} />
             <Route path="/service-users/:id" element={<ServiceUsersDetails />} />
-            <Route path="/service-users/:id/rota" element={<ServiceUsersRotas />} />
+            <Route path="/rotas" element={<ServiceUsersRotas />} />
         </Routes>
     </Router>
 );
