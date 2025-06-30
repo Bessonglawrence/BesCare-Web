@@ -9,6 +9,7 @@ import ServiceUsersDetails from '../screens/ServiceUsersDetails/ServiceUsersDeta
 import ServiceUsersRotas from '../screens/ServiceUsersRotas/ServiceUsersRotas';
 import HomeScreen from '../screens/Home/Home.screen';
 //import CarersRota from '../pages/CarersRota';
+import Settings from '../screens/Settings/Settings';
 
 const AppRoutes: React.FC = () => (
     <Router>
@@ -20,6 +21,8 @@ const AppRoutes: React.FC = () => (
             <Route path="/clients" element={<ServiceUsersScreen />} />
             <Route path="/service-users/:id" element={<ServiceUsersDetails />} />
             <Route path="/rotas" element={<ServiceUsersRotas />} />
+            <Route path="/settings" element={<Settings />} />
+            {/* Add more routes as needed */}
         </Routes>
     </Router>
 );
