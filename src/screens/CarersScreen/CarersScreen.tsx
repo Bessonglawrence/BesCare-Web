@@ -428,10 +428,13 @@ const CarersScreen = () => {
                         }}
                         onClick={() => setShowModal(true)}
                     >
-                        <FontAwesomeIcon icon={faPlus} color="#1769aa" style={{ fontSize: 30, marginRight: '8px', marginBottom: '-5px' }} />
+                        <FontAwesomeIcon icon={faPlus} color="#1769aa" style={{ fontSize: 30, marginRight: '8px', marginBottom: '-5px', }} />
                        Add Carer
                     </button>
-                         <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '16px 0' }}>
+                    <span style={{ fontSize: '18px', color: '#1769aa', fontStyle: 'italic' }}>
+                        Total Carers: {carersList.length}
+                    </span>
+                  <div style={{ display: 'flex', justifyContent: 'flex-end', margin: '16px 0' }}>
                     <button
                         onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                         disabled={currentPage === 1}

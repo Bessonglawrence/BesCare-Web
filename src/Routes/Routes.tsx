@@ -10,6 +10,7 @@ import ServiceUsersRotas from '../screens/ServiceUsersRotas/ServiceUsersRotas';
 import HomeScreen from '../screens/Home/Home.screen';
 //import CarersRota from '../pages/CarersRota';
 import Settings from '../screens/Settings/Settings';
+import SendNotification from '../screens/SendNotification/SendNotification';
 
 const AppRoutes: React.FC = () => (
     <Router>
@@ -22,6 +23,7 @@ const AppRoutes: React.FC = () => (
             <Route path="/service-users/:id" element={<ServiceUsersDetails />} />
             <Route path="/rotas" element={<ServiceUsersRotas />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/notifications" element={<SendNotification />} />
             {/* Add more routes as needed */}
         </Routes>
     </Router>

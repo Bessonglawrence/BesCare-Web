@@ -19,6 +19,7 @@ const SideNavigator: React.FC = () => {
     // Detect mobile view (optional: you can use a custom hook or window.matchMedia)
     const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
 
+    const [actionModalOpen, setActionModalOpen] = useState(false);
     return (
         <>
             <style>
@@ -257,9 +258,105 @@ const SideNavigator: React.FC = () => {
                         outline: 'none',
                         transition: 'background 0.2s, width 0.2s, height 0.2s',
                     }}
+                    onClick={() => setActionModalOpen(true)}
                 >
                     <FontAwesomeIcon icon={faPlus} color="#fff" style={{ fontSize: 30 }} />
                 </button>
+                {/* Action Modal */}
+                {typeof window !== 'undefined' && (
+                    <style>
+                        {`
+                        .slide-modal-overlay {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100vw;
+                            height: 100vh;
+                            background: rgba(0,0,0,0.25);
+                            z-index: 3000;
+                            transition: opacity 0.3s;
+                        }
+                        .slide-modal {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            height: 100vh;
+                            width: 25vw;
+                            min-width: 260px;
+                            max-width: 400px;
+                            background: #fff;
+                            box-shadow: 2px 0 16px rgba(37,99,235,0.12);
+                            z-index: 3100;
+                            transform: translateX(-100%);
+                            transition: transform 4s cubic-bezier(.4,0,.2,1);
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .slide-modal.open {
+                            transform: translateX(0);
+                        }
+                        @media (max-width: 900px) {
+                            .slide-modal {
+                                width: 70vw;
+                                min-width: 0;
+                                max-width: 90vw;
+                            }
+                        }
+                        `}
+                    </style>
+                )}
+                {actionModalOpen && (
+                    <>
+                        <div
+                            className="slide-modal-overlay"
+                            onClick={() => setActionModalOpen(false)}
+                            style={{
+                                position: 'fixed',
+                                top: 0,
+                                left: '100px', // sidebar width
+                                width: 'calc(100vw - 100px)',
+                                height: '100vh',
+                                background: 'rgba(0,0,0,0.25)',
+                                zIndex: 3000,
+                                transition: 'opacity 0.3s',
+                            }}
+                        />
+                        <div
+                            className={`slide-modal open`}
+                            style={{
+                                left: '100px', // sidebar width
+                                transition: 'transform 4s cubic-bezier(.4,0,.2,1), opacity 4s ease',
+                            }}
+                        >
+                            <div style={{
+                                display: 'flex',
+                                justifyContent: 'flex-end',
+                                padding: 16,
+                                borderBottom: '1px solid #e5e7eb'
+                            }}>
+                                <button
+                                    aria-label="Close"
+                                    onClick={() => setActionModalOpen(false)}
+                                    style={{
+                                        background: 'none',
+                                        border: 'none',
+                                        fontSize: 24,
+                                        cursor: 'pointer',
+                                        color: '#333'
+                                    }}
+                                >
+                                    &times;
+                                </button>
+                            </div>
+                            <div style={{ padding: 24 }}>
+                                <h2 style={{ margin: 0, fontSize: 20, color: '#053b6e' }}>Action Modal</h2>
+                                <p style={{ marginTop: 16, color: '#444' }}>
+                                    Place your modal content here.
+                                </p>
+                            </div>
+                        </div>
+                    </>
+                )}
                 <div
                     className="action-label"
                     style={{

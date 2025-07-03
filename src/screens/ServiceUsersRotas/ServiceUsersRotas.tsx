@@ -7,7 +7,7 @@ export default function ServiceUsersRotas() {
     <div>
       <SideNavigator />
         <NavBar />
-        <div className="container" style={{ justifyContent: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh', padding: '20px' }}>
+        <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', marginTop: '60px' }}>
             {/* Main content area */}
         </div>
         <h1>Welcome to the Service Users Rotas Screen</h1>        
