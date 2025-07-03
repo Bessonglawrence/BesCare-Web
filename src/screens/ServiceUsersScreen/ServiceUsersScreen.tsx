@@ -1,12 +1,13 @@
 import React,{useState, FormEvent} from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import SideNavigator from '../../components/SideBar/SideNavigator';
-import { serviceUsers, ServiceUser } from '../../components/Data/data';
+import { serviceUsers, ServiceUser, regions } from '../../components/Data/data';
 import { faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { join } from 'path';
 
 const serviceUsersList: ServiceUser[] = serviceUsers;
-
+const regionsList = regions;
 
 const initialFormState = {
     firstName: '',
@@ -18,8 +19,12 @@ const initialFormState = {
     nextOfKin: '',
     nextOfKinNumber: '',
     nextOfKinEmail: '',
+    nextOfKinAddress: '',
     medications: [''],
-    careTypes: ''
+    careTypes: '',
+    region: '',
+    dateOfBirth: '',
+    joiningDate: '',
 };
 
 const ServiceUsersScreen = () => {
@@ -83,7 +88,7 @@ const ServiceUsersScreen = () => {
                                 <iframe
                                     title="Service User Location"
                                     width="400"
-                                    height="700"
+                                    height="800"
                                     style={{ border: 0 }}
                                     loading="lazy"
                                     allowFullScreen
@@ -174,6 +179,48 @@ const ServiceUsersScreen = () => {
                                             background: '#fff'
                                         }}
                                     />
+                                    <div style={{ display: 'flex', gap: '15px' }}>
+                                        <div style={{ flex: 1 }}>
+                                            <label style={{ fontSize: '14px', color: '#555', marginBottom: '4px', display: 'block' }}>
+                                                Date of Birth
+                                            </label>
+                                            <input
+                                                type="date"
+                                                value={form.dateOfBirth}
+                                                onChange={e => setForm({ ...form, dateOfBirth: e.target.value })}
+                                                required
+                                                style={{
+                                                    width: '82%',
+                                                    height: '44px',
+                                                    borderRadius: '6px',
+                                                    border: '1px solid #d0e3f7',
+                                                    padding: '0 14px',
+                                                    fontSize: '16px',
+                                                    background: '#fff'
+                                                }}
+                                            />
+                                        </div>
+                                        <div style={{ flex: 1 }}>
+                                            <label style={{ fontSize: '14px', color: '#555', marginBottom: '4px', display: 'block' }}>
+                                                Joining Date
+                                            </label>
+                                            <input
+                                                type="date"
+                                                value={form.joiningDate}
+                                                onChange={e => setForm({ ...form, joiningDate: e.target.value })}
+                                                required
+                                                style={{
+                                                    width: '82%',
+                                                    height: '44px',
+                                                    borderRadius: '6px',
+                                                    border: '1px solid #d0e3f7',
+                                                    padding: '0 14px',
+                                                    fontSize: '16px',
+                                                    background: '#fff'
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
                                     <input
                                         type="text"
                                         placeholder="Address"
@@ -252,11 +299,9 @@ const ServiceUsersScreen = () => {
                                         <input
                                             type="text"
                                             placeholder="Medications"
-                                            value={form.medications[form.medications.length - 1] || ''}
+                                            value={form.nextOfKinAddress}
                                             onChange={e => {
-                                                const meds = [...form.medications];
-                                                meds[meds.length - 1] = e.target.value;
-                                                setForm({ ...form, medications: meds });
+                                                setForm({ ...form, nextOfKinAddress: e.target.value });
                                             }}
                                             style={{
                                                 height: '44px',
@@ -270,6 +315,29 @@ const ServiceUsersScreen = () => {
                                         />
                                         
                                     </div>
+                            <div style={{ fontSize: '14px', color: '#555', }}>
+                                <select
+                                value={form.region}
+                                onChange={e => setForm({ ...form, region: e.target.value })}
+                                style={{
+                                    width: '100%',
+                                    height: '44px',
+                                    borderRadius: '8px',
+                                    border: '1.5px solid #b3d3f6',
+                                    padding: '0 14px',
+                                    fontSize: '16px',
+                                    background: '#fff',
+                                    boxShadow: '0 1px 4px rgba(23,105,170,0.04)'
+                                }}
+                                >
+                                <option value="">Select Region</option>
+                                {regionsList.map(region => (
+                                    <option key={region.id} value={region.code}>
+                                    {region.name}
+                                    </option>
+                                ))}
+                                </select>
+                            </div>
                                     
                                     <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '10px' }}>
                                         <button
