@@ -8,6 +8,7 @@ export interface Carer {
     phoneNumber: string;
     startDate: string; // ISO date string
     dateOfBirth: string; // ISO date string
+    profilePicture: string; // URL or path to image
 }
 
 export const carers: Carer[] = [
@@ -20,6 +21,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 1234 567890",
         startDate: "2023-01-15",
         dateOfBirth: "1990-06-12",
+        profilePicture: "/images/carers/alice-johnson.jpg",
     },
     {
         id: 2,
@@ -30,6 +32,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 2345 678901",
         startDate: "2022-09-10",
         dateOfBirth: "1985-11-23",
+        profilePicture: "/images/carers/michael-smith.jpg",
     },
     {
         id: 3,
@@ -40,6 +43,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 3456 789012",
         startDate: "2021-05-20",
         dateOfBirth: "1992-03-18",
+        profilePicture: "/images/carers/sophie-lee.jpg",
     },
     {
         id: 4,
@@ -50,6 +54,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 4567 890123",
         startDate: "2020-11-01",
         dateOfBirth: "1988-08-30",
+        profilePicture: "/images/carers/james-brown.jpg",
     },
     {
         id: 5,
@@ -60,6 +65,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 5678 901234",
         startDate: "2019-07-12",
         dateOfBirth: "1995-12-05",
+        profilePicture: "/images/carers/emma-wilson.jpg",
     },
     {
         id: 6,
@@ -70,6 +76,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 6789 012345",
         startDate: "2021-03-10",
         dateOfBirth: "1991-04-22",
+        profilePicture: "/images/carers/oliver-davis.jpg",
     },
     {
         id: 7,
@@ -80,6 +87,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 7890 123456",
         startDate: "2020-08-15",
         dateOfBirth: "1989-09-14",
+        profilePicture: "/images/carers/charlotte-evans.jpg",
     },
     {
         id: 8,
@@ -90,6 +98,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 8901 234567",
         startDate: "2018-12-01",
         dateOfBirth: "1987-02-10",
+        profilePicture: "/images/carers/benjamin-clark.jpg",
     },
     {
         id: 9,
@@ -100,6 +109,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 9012 345678",
         startDate: "2022-06-20",
         dateOfBirth: "1993-07-25",
+        profilePicture: "/images/carers/amelia-lewis.jpg",
     },
     {
         id: 10,
@@ -110,6 +120,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 1234 567891",
         startDate: "2017-10-05",
         dateOfBirth: "1986-05-19",
+        profilePicture: "/images/carers/william-walker.jpg",
     },
     {
         id: 11,
@@ -120,6 +131,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 2345 678912",
         startDate: "2019-04-18",
         dateOfBirth: "1994-11-02",
+        profilePicture: "/images/carers/mia-hall.jpg",
     },
     {
         id: 12,
@@ -130,6 +142,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 3456 789123",
         startDate: "2020-02-28",
         dateOfBirth: "1990-01-30",
+        profilePicture: "/images/carers/jack-allen.jpg",
     },
     {
         id: 13,
@@ -140,6 +153,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 4567 891234",
         startDate: "2021-07-09",
         dateOfBirth: "1996-08-17",
+        profilePicture: "/images/carers/isabella-young.jpg",
     },
     {
         id: 14,
@@ -150,6 +164,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 5678 912345",
         startDate: "2018-05-23",
         dateOfBirth: "1984-03-12",
+        profilePicture: "/images/carers/henry-king.jpg",
     },
     {
         id: 15,
@@ -160,6 +175,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 6789 123456",
         startDate: "2022-11-30",
         dateOfBirth: "1997-10-28",
+        profilePicture: "/images/carers/emily-wright.jpg",
     },
     {
         id: 16,
@@ -170,6 +186,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 7891 234567",
         startDate: "2019-09-14",
         dateOfBirth: "1989-06-05",
+        profilePicture: "/images/carers/george-scott.jpg",
     },
     {
         id: 17,
@@ -180,6 +197,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 8912 345678",
         startDate: "2020-01-22",
         dateOfBirth: "1992-12-11",
+        profilePicture: "/images/carers/grace-green.jpg",
     },
     {
         id: 18,
@@ -190,6 +208,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 9123 456789",
         startDate: "2017-06-17",
         dateOfBirth: "1985-09-27",
+        profilePicture: "/images/carers/samuel-baker.jpg",
     },
     {
         id: 19,
@@ -200,6 +219,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 1235 678901",
         startDate: "2021-12-03",
         dateOfBirth: "1993-03-09",
+        profilePicture: "/images/carers/chloe-adams.jpg",
     },
     {
         id: 20,
@@ -210,6 +230,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 2346 789012",
         startDate: "2018-08-29",
         dateOfBirth: "1988-07-21",
+        profilePicture: "/images/carers/daniel-turner.jpg",
     },
     {
         id: 21,
@@ -220,6 +241,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 3457 890123",
         startDate: "2020-04-11",
         dateOfBirth: "1995-05-16",
+        profilePicture: "/images/carers/ella-carter.jpg",
     },
     {
         id: 22,
@@ -230,6 +252,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 4568 901234",
         startDate: "2019-11-07",
         dateOfBirth: "1991-02-24",
+        profilePicture: "/images/carers/matthew-phillips.jpg",
     },
     {
         id: 23,
@@ -240,6 +263,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 5679 012345",
         startDate: "2022-02-14",
         dateOfBirth: "1996-09-13",
+        profilePicture: "/images/carers/lily-mitchell.jpg",
     },
     {
         id: 24,
@@ -250,6 +274,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 6780 123456",
         startDate: "2017-03-19",
         dateOfBirth: "1987-11-08",
+        profilePicture: "/images/carers/joseph-parker.jpg",
     },
     {
         id: 25,
@@ -260,6 +285,7 @@ export const carers: Carer[] = [
         phoneNumber: "+44 7892 234567",
         startDate: "2021-08-25",
         dateOfBirth: "1994-04-03",
+        profilePicture: "/images/carers/sienna-morris.jpg",
     },
 ];
 
@@ -268,6 +294,7 @@ export interface ServiceUser {
     name: string;
     dateOfBirth: string; // ISO date string
     address: string;
+    gender: string;
     email: string;
     phoneNumber: string;
     nextOfKin: string;
@@ -275,12 +302,19 @@ export interface ServiceUser {
     careList: string[];
     medicationList: string[];
     profilePicture: string; // URL or path to image
+    isActive?: boolean; // Optional field to indicate if the user is currently active
+    allergies?: string[]; // Optional field for allergies
+    emergencyContact?: {
+        name: string;
+        phoneNumber: string;
+    }[]; // Optional field for emergency contact
 }
 
 export const serviceUsers: ServiceUser[] = [
     {
         id: 1,
         name: "John Doe",
+        gender: "Male",
         dateOfBirth: "1945-05-12",
         address: "12 Rose St, Nottingham, England",
         email: "john.doe@example.com",
@@ -289,11 +323,17 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 2345 678901",
         careList: ["Personal Care", "Medication Support"],
         medicationList: ["Aspirin", "Metformin", "Lisinopril"],
-        profilePicture: "/images/service-users/john-doe.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/1.jpg",
+        isActive: true,
+        allergies: ["Penicillin"],
+        emergencyContact: [
+            { name: "Jane Doe", phoneNumber: "+44 2345 678901" }
+        ],
     },
     {
         id: 2,
         name: "Mary Smith",
+        gender: "Female",
         dateOfBirth: "1950-09-23",
         address: "34 Daisy Ave, Nottingham, England",
         email: "mary.smith@example.com",
@@ -302,11 +342,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 4567 890123",
         careList: ["Meal Preparation", "Mobility Assistance"],
         medicationList: ["Lisinopril", "Aspirin", "Metformin", "Atorvastatin"],
-        profilePicture: "/images/service-users/mary-smith.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/2.jpg",
+        isActive: false,
     },
     {
         id: 3,
         name: "Robert Brown",
+        gender: "Male",
         dateOfBirth: "1938-02-17",
         address: "56 Tulip Rd, Nottingham, England",
         email: "robert.brown@example.com",
@@ -315,11 +357,17 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 6789 012345",
         careList: ["Companionship", "Housekeeping"],
         medicationList: ["Atorvastatin", "Warfarin", "Amlodipine"],
-        profilePicture: "/images/service-users/robert-brown.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/3.jpg",
+        isActive: true,
+        allergies: ["Peanuts", "Shellfish"],
+        emergencyContact: [
+            { name: "Susan Brown", phoneNumber: "+44 6789 012345" }
+        ],
     },
     {
         id: 4,
         name: "Patricia Evans",
+        gender: "Female",
         dateOfBirth: "1948-11-05",
         address: "78 Sunflower Ln, Nottingham, England",
         email: "patricia.evans@example.com",
@@ -328,11 +376,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 8901 234567",
         careList: ["Dementia Care", "Personal Care"],
         medicationList: ["Donepezil", "Aspirin", "Metoprolol", "Levothyroxine"],
-        profilePicture: "/images/service-users/patricia-evans.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/4.jpg",
+        isActive: true,
     },
     {
         id: 5,
         name: "Linda Wilson",
+        gender: "Female",
         dateOfBirth: "1955-07-30",
         address: "90 Bluebell Ct, Nottingham, England",
         email: "linda.wilson@example.com",
@@ -341,11 +391,14 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 1234 567891",
         careList: ["Meal Preparation", "Medication Support"],
         medicationList: ["Metoprolol", "Amlodipine"],
-        profilePicture: "/images/service-users/linda-wilson.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/5.jpg",
+        isActive: false,
+        allergies: ["Latex"],
     },
     {
         id: 6,
         name: "Barbara Clark",
+        gender: "Female",
         dateOfBirth: "1942-03-15",
         address: "23 Oak St, Nottingham, England",
         email: "barbara.clark@example.com",
@@ -354,11 +407,16 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 3456 789123",
         careList: ["Personal Care", "Mobility Assistance"],
         medicationList: ["Levothyroxine", "Metformin", "Aspirin", "Simvastatin", "Omeprazole"],
-        profilePicture: "/images/service-users/barbara-clark.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/6.jpg",
+        isActive: true,
+        emergencyContact: [
+            { name: "Richard Clark", phoneNumber: "+44 3456 789123" }
+        ],
     },
     {
         id: 7,
         name: "James Taylor",
+        gender: "Male",
         dateOfBirth: "1939-12-01",
         address: "45 Maple Ave, Nottingham, England",
         email: "james.taylor@example.com",
@@ -367,11 +425,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 5678 912345",
         careList: ["Companionship", "Housekeeping"],
         medicationList: ["Simvastatin", "Aspirin"],
-        profilePicture: "/images/service-users/james-taylor.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/7.jpg",
+        isActive: false,
     },
     {
         id: 8,
         name: "Susan Harris",
+        gender: "Female",
         dateOfBirth: "1952-08-19",
         address: "67 Willow Rd, Nottingham, England",
         email: "susan.harris@example.com",
@@ -380,11 +440,14 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 7891 234567",
         careList: ["Personal Care", "Meal Preparation"],
         medicationList: ["Amlodipine", "Metformin", "Warfarin"],
-        profilePicture: "/images/service-users/susan-harris.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/8.jpg",
+        isActive: true,
+        allergies: ["Gluten"],
     },
     {
         id: 9,
         name: "David Lewis",
+        gender: "Male",
         dateOfBirth: "1947-06-25",
         address: "89 Birch St, Nottingham, England",
         email: "david.lewis@example.com",
@@ -393,11 +456,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 9123 456789",
         careList: ["Medication Support", "Mobility Assistance"],
         medicationList: ["Omeprazole", "Aspirin", "Metformin", "Lisinopril"],
-        profilePicture: "/images/service-users/david-lewis.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/9.jpg",
+        isActive: false,
     },
     {
         id: 10,
         name: "Margaret Walker",
+        gender: "Female",
         dateOfBirth: "1944-04-10",
         address: "101 Cedar Ln, Nottingham, England",
         email: "margaret.walker@example.com",
@@ -406,11 +471,16 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 2346 789012",
         careList: ["Dementia Care", "Personal Care"],
         medicationList: ["Metformin", "Amlodipine", "Simvastatin"],
-        profilePicture: "/images/service-users/margaret-walker.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/10.jpg",
+        isActive: true,
+        emergencyContact: [
+            { name: "Edward Walker", phoneNumber: "+44 2346 789012" }
+        ],
     },
     {
         id: 11,
         name: "Charles Hall",
+        gender: "Male",
         dateOfBirth: "1937-09-14",
         address: "135 Spruce Rd, Nottingham, England",
         email: "charles.hall@example.com",
@@ -419,11 +489,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 4568 901234",
         careList: ["Companionship", "Housekeeping"],
         medicationList: ["Aspirin", "Metoprolol", "Levothyroxine", "Warfarin"],
-        profilePicture: "/images/service-users/charles-hall.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/11.jpg",
+        isActive: false,
     },
     {
         id: 12,
         name: "Dorothy Allen",
+        gender: "Female",
         dateOfBirth: "1949-01-30",
         address: "246 Poplar St, Nottingham, England",
         email: "dorothy.allen@example.com",
@@ -432,11 +504,14 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 6780 123456",
         careList: ["Personal Care", "Medication Support"],
         medicationList: ["Warfarin", "Aspirin"],
-        profilePicture: "/images/service-users/dorothy-allen.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/12.jpg",
+        isActive: true,
+        allergies: ["Eggs"],
     },
     {
         id: 13,
         name: "Paul Young",
+        gender: "Male",
         dateOfBirth: "1951-08-17",
         address: "357 Walnut Rd, Nottingham, England",
         email: "paul.young@example.com",
@@ -445,11 +520,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 8902 345678",
         careList: ["Meal Preparation", "Mobility Assistance"],
         medicationList: ["Lisinopril", "Metformin", "Amlodipine", "Simvastatin"],
-        profilePicture: "/images/service-users/paul-young.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/13.jpg",
+        isActive: false,
     },
     {
         id: 14,
         name: "Nancy King",
+        gender: "Female",
         dateOfBirth: "1943-03-12",
         address: "468 Sycamore St, Nottingham, England",
         email: "nancy.king@example.com",
@@ -458,11 +535,17 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 1236 789013",
         careList: ["Dementia Care", "Personal Care"],
         medicationList: ["Donepezil", "Aspirin", "Metformin"],
-        profilePicture: "/images/service-users/nancy-king.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/14.jpg",
+        isActive: true,
+        allergies: ["Bee stings"],
+        emergencyContact: [
+            { name: "George King", phoneNumber: "+44 1236 789013" }
+        ],
     },
     {
         id: 15,
         name: "Edward Wright",
+        gender: "Male",
         dateOfBirth: "1946-10-28",
         address: "579 Beech Ln, Nottingham, England",
         email: "edward.wright@example.com",
@@ -471,11 +554,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 3458 901235",
         careList: ["Companionship", "Housekeeping"],
         medicationList: ["Simvastatin", "Levothyroxine", "Aspirin", "Metformin"],
-        profilePicture: "/images/service-users/edward-wright.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/15.jpg",
+        isActive: false,
     },
     {
         id: 16,
         name: "Helen Scott",
+        gender: "Female",
         dateOfBirth: "1953-06-05",
         address: "680 Hawthorn Rd, Nottingham, England",
         email: "helen.scott@example.com",
@@ -484,11 +569,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 5670 123457",
         careList: ["Personal Care", "Medication Support"],
         medicationList: ["Amlodipine", "Metformin"],
-        profilePicture: "/images/service-users/helen-scott.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/16.jpg",
+        isActive: true,
     },
     {
         id: 17,
         name: "Frank Green",
+        gender: "Male",
         dateOfBirth: "1941-12-11",
         address: "791 Rowan St, Nottingham, England",
         email: "frank.green@example.com",
@@ -497,11 +584,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 7893 345679",
         careList: ["Meal Preparation", "Mobility Assistance"],
         medicationList: ["Levothyroxine", "Aspirin", "Metformin", "Simvastatin"],
-        profilePicture: "/images/service-users/frank-green.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/17.jpg",
+        isActive: false,
     },
     {
         id: 18,
         name: "Betty Baker",
+        gender: "Female",
         dateOfBirth: "1940-09-27",
         address: "892 Hazel Ave, Nottingham, England",
         email: "betty.baker@example.com",
@@ -510,11 +599,14 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 9014 567891",
         careList: ["Dementia Care", "Personal Care"],
         medicationList: ["Donepezil", "Metoprolol", "Aspirin"],
-        profilePicture: "/images/service-users/betty-baker.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/18.jpg",
+        isActive: true,
+        allergies: ["Dairy"],
     },
     {
         id: 19,
         name: "Ronald Adams",
+        gender: "Male",
         dateOfBirth: "1943-03-09",
         address: "903 Aspen Rd, Nottingham, England",
         email: "ronald.adams@example.com",
@@ -523,11 +615,16 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 2348 901236",
         careList: ["Companionship", "Housekeeping"],
         medicationList: ["Metoprolol", "Aspirin", "Warfarin", "Lisinopril"],
-        profilePicture: "/images/service-users/ronald-adams.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/19.jpg",
+        isActive: false,
+        emergencyContact: [
+            { name: "Chloe Adams", phoneNumber: "+44 2348 901236" }
+        ],
     },
     {
         id: 20,
         name: "Shirley Turner",
+        gender: "Female",
         dateOfBirth: "1948-07-21",
         address: "14 Magnolia St, Nottingham, England",
         email: "shirley.turner@example.com",
@@ -536,11 +633,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 4560 123458",
         careList: ["Personal Care", "Medication Support"],
         medicationList: ["Aspirin", "Metformin", "Atorvastatin"],
-        profilePicture: "/images/service-users/shirley-turner.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/20.jpg",
+        isActive: true,
     },
     {
         id: 21,
         name: "Kenneth Carter",
+        gender: "Male",
         dateOfBirth: "1945-05-16",
         address: "23 Redwood Ave, Nottingham, England",
         email: "kenneth.carter@example.com",
@@ -549,11 +648,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 6782 345680",
         careList: ["Meal Preparation", "Mobility Assistance"],
         medicationList: ["Metformin", "Amlodipine", "Simvastatin", "Levothyroxine"],
-        profilePicture: "/images/service-users/kenneth-carter.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/21.jpg",
+        isActive: false,
     },
     {
         id: 22,
         name: "Carol Phillips",
+        gender: "Female",
         dateOfBirth: "1952-02-24",
         address: "45 Willow St, Nottingham, England",
         email: "carol.phillips@example.com",
@@ -562,11 +663,14 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 8904 567892",
         careList: ["Dementia Care", "Personal Care"],
         medicationList: ["Donepezil", "Aspirin", "Metformin"],
-        profilePicture: "/images/service-users/carol-phillips.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/22.jpg",
+        isActive: true,
+        allergies: ["Sulfa drugs"],
     },
     {
         id: 23,
         name: "Steven Mitchell",
+        gender: "Male",
         dateOfBirth: "1946-09-13",
         address: "67 Maple Rd, Nottingham, England",
         email: "steven.mitchell@example.com",
@@ -575,11 +679,13 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 1238 901237",
         careList: ["Companionship", "Housekeeping"],
         medicationList: ["Simvastatin", "Metoprolol", "Aspirin", "Atorvastatin", "Levothyroxine"],
-        profilePicture: "/images/service-users/steven-mitchell.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/23.jpg",
+        isActive: false,
     },
     {
         id: 24,
         name: "Janet Parker",
+        gender: "Female",
         dateOfBirth: "1947-11-08",
         address: "78 Oak Ave, Nottingham, England",
         email: "janet.parker@example.com",
@@ -588,11 +694,16 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 3450 123459",
         careList: ["Personal Care", "Medication Support"],
         medicationList: ["Amlodipine", "Levothyroxine", "Metformin"],
-        profilePicture: "/images/service-users/janet-parker.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/women/24.jpg",
+        isActive: true,
+        emergencyContact: [
+            { name: "Joseph Parker", phoneNumber: "+44 3450 123459" }
+        ],
     },
     {
         id: 25,
         name: "Arthur Morris",
+        gender: "Male",
         dateOfBirth: "1944-04-03",
         address: "90 Pine St, Nottingham, England",
         email: "arthur.morris@example.com",
@@ -601,6 +712,22 @@ export const serviceUsers: ServiceUser[] = [
         nextOfKinPhoneNumber: "+44 5672 345681",
         careList: ["Meal Preparation", "Mobility Assistance"],
         medicationList: ["Levothyroxine", "Aspirin", "Metformin", "Simvastatin"],
-        profilePicture: "/images/service-users/arthur-morris.jpg",
+        profilePicture: "https://randomuser.me/api/portraits/men/25.jpg",
+        isActive: false,
     },
+];
+
+export const regions = [
+    { id: 1, name: "North West", code: "NW" },
+    { id: 2, name: "North East", code: "NE" },
+    { id: 3, name: "Yorkshire and the Humber", code: "YH" },
+    { id: 4, name: "East Midlands", code: "EM" },
+    { id: 5, name: "West Midlands", code: "WM" },
+    { id: 6, name: "East of England", code: "EE" },
+    { id: 7, name: "London", code: "LDN" },
+    { id: 8, name: "South East", code: "SE" },
+    { id: 9, name: "South West", code: "SW" },
+    { id: 10, name: "Wales", code: "WLS" },
+    { id: 11, name: "Scotland", code: "SCT" },
+    { id: 12, name: "Northern Ireland", code: "NI" },
 ];
