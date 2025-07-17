@@ -5,6 +5,7 @@ import { serviceUsers, ServiceUser, regions } from '../../components/Data/data';
 import { faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { join } from 'path';
+import { useNavigate } from 'react-router-dom';
 
 const serviceUsersList: ServiceUser[] = serviceUsers;
 const regionsList = regions;
@@ -30,6 +31,7 @@ const initialFormState = {
 const ServiceUsersScreen = () => {
     const [form, setForm] = useState(initialFormState);
     const [showModal, setShowModal] = useState(false);
+    const navigate = useNavigate();
 
     // Dummy handler for form submission
     const handleAddUser = (e: FormEvent<HTMLFormElement>) => {
@@ -445,7 +447,10 @@ const ServiceUsersScreen = () => {
                             listStyle: 'none',
                             display: 'flex',
                             justifyContent: 'space-between',
-                        }}>
+                            cursor: 'pointer',
+                        }}
+                        onClick={() => navigate(`/service-users/${user.id}`)}
+                        >
                             <div style={{ display: 'flex', alignItems: 'center', flex: 4, marginRight: '10rem' }}>
                                 <img
                                     src={user.profilePicture}

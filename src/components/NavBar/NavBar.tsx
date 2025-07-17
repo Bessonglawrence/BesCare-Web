@@ -88,7 +88,7 @@ const NavBar: React.FC = () => {
                 }
                 .navbar-logo-img {
                     width: 190px;
-                    height: auto;
+                    height: 70px;
                     max-height: 140px;
                     margin-left: 3rem;
                 }
